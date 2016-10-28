@@ -1,7 +1,7 @@
 <project name="Pmd-Examples" default="all">
 
-	<property name="src" location="src" />
-	<property name="reports" location="reports" />
+	<property name="src" location="src/main/java" />
+	<property name="reports" location="target" />
 	<property name="lib.pmd" location="vendor/pmd-4.3/lib" />
 	
 	<path id="classpath">
