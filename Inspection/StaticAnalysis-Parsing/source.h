@@ -5,5 +5,5 @@
 
  
 extern double pow(double base, double exp);
-extern double sin(double value)
+extern double sin double value);
 extern double log(double value);
