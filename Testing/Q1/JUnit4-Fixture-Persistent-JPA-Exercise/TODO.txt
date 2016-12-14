@@ -1,0 +1,23 @@
+Exercise: Persistent Test Fixture (JPA)
+-------------------------------------------------------------------------------
+
+Implementieren Sie die Setup und Teardown Phase des gegebenen JUnit Tests. 
+Beide Phasen sollen in zwei Stufen implementiert werden:
+
+1) Pro Class Setup / Teardown
+	Wenn die Test-Klasse vom Test-Runner geladen (oder verworfen) wird, sollen
+	die gegebenen SQL Scripts ausgeführt werden:
+		src/test/resources/sql/createUserTable.sql
+		src/test/resources/sql/dropUserTable.sql 
+
+2) Pro Test Setup / Teardown
+	Vor jedem Test sollen mittels der UserTable.createUser() Methode zwei User
+	angelegt werden:
+		1, "homer", "simpson", "homer", "Kqq3lbODaQT4LvxsoihdknrtdSBiFOHaODQY65DJBS8="
+		2, "marge","simpson", "marge", "tLgR+kBQUymuhx5S8DUnw3IMmvf7hgeBllhTXFSExB4="
+		
+	Das Teardown soll mit Hilfe einer Datenbank-Transaktion (rollback) durchgeführt
+	werden. Verwenden Sie dazu die gegebenen Methoden:
+		JpaTestHelper.txBegin();
+		JpaTestHelper.txRollback(); 	
+		
