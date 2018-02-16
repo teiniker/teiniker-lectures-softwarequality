@@ -12,24 +12,22 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class UserTableTest 
-	extends AbstractJdbcTest 
 {		
 	private Connection c = null;
 	private Service service = null;
+	private final static JdbcTestHelper JDBC_HELPER = new JdbcTestHelper();
 	
 	@BeforeClass
 	public static void init()
 	{
-		AbstractJdbcTest helper = new AbstractJdbcTest();
-		helper.executeSqlScript("src/test/resources/sql/createUserTable.sql");
-		helper.executeSqlScript("src/test/resources/sql/insertUserTable.sql");
+		JDBC_HELPER.executeSqlScript("src/test/resources/sql/createUserTable.sql");
+		JDBC_HELPER.executeSqlScript("src/test/resources/sql/insertUserTable.sql");
 	}
 	
 	@AfterClass
 	public static void destroy()
 	{
-		AbstractJdbcTest helper = new AbstractJdbcTest();
-		helper.executeSqlScript("src/test/resources/sql/dropUserTable.sql");		
+		JDBC_HELPER.executeSqlScript("src/test/resources/sql/dropUserTable.sql");		
 	}
 	
 	@Before
@@ -37,8 +35,8 @@ public class UserTableTest
 	{
 		System.out.println("setup()");
 
-		c = getConnection();
-		txBegin(c);
+		c = JDBC_HELPER.getConnection();
+		JDBC_HELPER.txBegin(c);
 		
 		service = new Service();
 	}
@@ -48,7 +46,7 @@ public class UserTableTest
 	{		      
 		System.out.println("teardown()");
 		
-		txRollback(c);
+		JDBC_HELPER.txRollback(c);
 		c.close();
 	}
 

@@ -61,7 +61,7 @@ public class ArticleServiceTestWithSpyAndStub
 
 		// behavioral verification
 		Assert.assertEquals(1, spy.logs.size());
-		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.findAll()"));
+		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.findAll"));
 
 		// TODO: Verify return data
 	}	

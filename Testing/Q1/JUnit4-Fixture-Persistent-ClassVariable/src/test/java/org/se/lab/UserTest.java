@@ -23,13 +23,13 @@ public class UserTest
 	@Before
 	public void setup()
 	{
-//		LongSequence.setSequenceNumber(1);
+		LongSequence.setSequenceNumber(1);
 	}
 	
 	@After
 	public void teardown()
 	{
-		LongSequence.resetSequenceNumber();
+//		LongSequence.resetSequenceNumber();
 	}
 	
 	

@@ -96,11 +96,11 @@ public class LoginPage
         driver.findElement(By.name("password")).clear();
         driver.findElement(By.name("password")).sendKeys(getPassword());
         new Select(driver.findElement(By.name("usergroup"))).selectByVisibleText(getUsergroup().name);
-        driver.findElement(By.xpath("(//input[@name='action'])[" + getUsergroup().value + "]")).click();
+        driver.findElement(By.xpath("(//input[@name='action'])[2]")).click();
         
         return new WelcomePage(driver);
     }
-
+    
     public WelcomePage login(String username, String password, Group usergroup)
     {
         setUsername(username);

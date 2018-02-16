@@ -12,7 +12,7 @@ root66
 How to create the user table in the MySQL server?
 ------------------------------------------------------------------------------
 
-$ cd MVC-UserList
+$ cd VulnerableWebApp
 $ mysql -u student -p
 Enter password: student
 

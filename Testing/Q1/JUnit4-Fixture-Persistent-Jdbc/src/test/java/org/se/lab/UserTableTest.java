@@ -42,4 +42,17 @@ public class UserTableTest
         boolean result = service.login(getConnection(), username, password);
         Assert.assertTrue(result);
     }
+
+	@Test
+    public void testLogin_InvalidUsername() throws SQLException, 
+        ClassNotFoundException
+    {
+        final String username = "burns";
+        final String password = "*******";
+        
+        Service service = new Service();
+        boolean result = service.login(getConnection(), username, password);
+        Assert.assertFalse(result);
+    }
+
 }

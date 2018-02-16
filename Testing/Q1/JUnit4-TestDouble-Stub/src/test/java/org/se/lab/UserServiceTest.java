@@ -17,14 +17,14 @@ public class UserServiceTest
     @Test
     public void testAddPerson()
     {
-    	UserDAO stub = new UserDAOStub();
+    	UserDAOStub stub = new UserDAOStub();
         UserService service = new UserService(stub);     	
     	
     	User user = new User(7, "Egon");
         service.addUser(user);      
         
         // Verify results and states
-        assertEquals(new User(7, "Egon"), ((UserDAOStub)stub).getUser());
+        assertEquals(new User(7, "Egon"), stub.getUser());
     }
 
     @Test

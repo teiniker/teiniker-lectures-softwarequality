@@ -3,17 +3,26 @@ package org.se.lab;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.se.lab.pages.LoginPage;
 import org.se.lab.pages.WelcomePage;
 
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
+
 public class LoginPageTest
 {
     private LoginPage page;
     private WebDriver driver;
 
+    @BeforeClass
+    public static void setupClass() {
+      FirefoxDriverManager.getInstance().setup();
+    }
+
+    
     @Before
     public void setUp() throws Exception
     {
