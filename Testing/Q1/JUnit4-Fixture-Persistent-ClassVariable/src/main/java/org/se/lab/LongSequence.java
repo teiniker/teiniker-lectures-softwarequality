@@ -1,32 +1,29 @@
 package org.se.lab;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public final class LongSequence
 {
-	private final static long INITIAL_SEQUENCE_NUMBER = 1;
-	
-	/*
-	 * Constructor
-	 */
 	private LongSequence() {}
-	
-	
+
 	/*
 	 * Property: sequenceNumber:long
 	 */
-	private static long sequenceNumber = INITIAL_SEQUENCE_NUMBER; 
+    private static final long INITIAL_SEQUENCE_NUMBER = 1; // default value
+	private static AtomicLong sequenceNumber = new AtomicLong(INITIAL_SEQUENCE_NUMBER);
 	
 	public synchronized static long getNextSequenceNumber()
 	{
-		return sequenceNumber++;
+		return sequenceNumber.getAndIncrement();
 	}
 	
 	public synchronized static void setSequenceNumber(long id)
 	{
-		LongSequence.sequenceNumber = id;
+		 sequenceNumber.set(id);
 	}	
 	
 	public synchronized static void resetSequenceNumber()
 	{
-		LongSequence.sequenceNumber = INITIAL_SEQUENCE_NUMBER;
+		sequenceNumber.set(INITIAL_SEQUENCE_NUMBER);
 	}
 }

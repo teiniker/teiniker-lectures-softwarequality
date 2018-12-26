@@ -3,7 +3,7 @@ package org.se.lab;
 public class User
 {
 	/*
-	 * Constructor
+	 * Initialization constructor
 	 */
 	public User(String username, String password)
 	{
@@ -62,31 +62,23 @@ public class User
 	@Override
 	public String toString()
 	{
-		return "User [id=" + id + ", username=" + username + ", password="
-				+ password + "]";
-	}
-	
-	@Override
-	public int hashCode()
-	{
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
-		return result;
+		return "User [id=" + id + ", username=" + username + "]";
 	}
 
 	@Override
-	public boolean equals(Object obj)
+	public boolean equals(Object o)
 	{
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		User other = (User) obj;
-		if (id != other.id)
-			return false;
-		return true;
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		User user = (User) o;
+
+		return id == user.id;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return (int) (id ^ (id >>> 32));
 	}
 }
