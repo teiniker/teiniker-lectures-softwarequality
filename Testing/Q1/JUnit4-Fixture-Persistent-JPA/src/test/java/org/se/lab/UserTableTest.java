@@ -16,7 +16,7 @@ import org.se.lab.UserTableImpl;
 
 public class UserTableTest
 {
-	private static final JdbcTestHelper JDBC_HELPER = new JdbcTestHelper();
+	private static final JdbcTestHelper JDBC_HELPER = new JdbcTestHelper("src/test/resources/jdbc.properties");
 	private static final JpaTestHelper JPA_HELPER = new JpaTestHelper();
 
 	private EntityManager em = JPA_HELPER.getEntityManager("test");
