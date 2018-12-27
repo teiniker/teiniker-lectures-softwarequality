@@ -58,57 +58,5 @@ public class OrderTest
 		Assert.assertEquals(5, p.getId());
 		Assert.assertEquals("Pizza Quattro Formaggi", p.getDescription());
 		Assert.assertEquals(820, p.getPrice());
-
-	}	
-	
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testOrder_IdIsNegative()
-	{
-		new Order(-1, "Special order");
-	}
-
-	@Test(expected = IllegalArgumentException.class)
-	public void testOrder_NameIsNull()
-	{
-		new Order(1, null);
-	}
-
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testOrderLine_IdIsNegative()
-	{
-		new OrderLine(-1, 1, new Product(3, "Pizza Frutti di Mare", 880));
-	}
-
-	@Test(expected = IllegalArgumentException.class)
-	public void testOrderLine_QuantityIsNegative()
-	{
-		new OrderLine(1, -1, new Product(3, "Pizza Frutti di Mare", 880));		
-	}
-
-	@Test(expected = IllegalArgumentException.class)
-	public void testOrderLine_ProductIsNull()
-	{
-		new OrderLine(1, 1, null);		
-	}
-	
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testProduct_IdIsNegative()
-	{
-		new Product(-1, "Pizza Frutti di Mare", 880);
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testProduct_DescriptionIsNull()
-	{
-		new Product(1, null, 880);
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testProduct_PriceIsNegative()
-	{
-		new Product(1, "Pizza Frutti di Mare", -880);
 	}	
 }
