@@ -89,3 +89,4 @@ teardown.
 ## References
 
 * Gerard Meszaros. **xUnit Test Patterns**. Addison-Wesley, 2007
+* [xUnit Test Patterns Web Page](http://xunitpatterns.com/)
