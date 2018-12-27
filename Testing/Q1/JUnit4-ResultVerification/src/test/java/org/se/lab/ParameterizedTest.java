@@ -8,19 +8,19 @@ public class ParameterizedTest
 	@Test
 	public void testToString1()
 	{
-		testToStringWithParameter("homer");
+        verifyToString("homer");
 	}
 
 	@Test
 	public void testToString2()
 	{
-		testToStringWithParameter("h");
+        verifyToString("h");
 	}
 	
 	@Test
 	public void testToString3()
 	{
-		testToStringWithParameter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        verifyToString("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 	}
 
 	
@@ -28,11 +28,15 @@ public class ParameterizedTest
 	 * We can extract the common fixture setup, exercise SUT, and verify into a new
 	 * parameterized test method. 
 	 */
-	public void testToStringWithParameter(String username)
+	private void verifyToString(String username)
 	{
-		User u = new User(7, username, "**********");
+		User u = new User(7, username, "Kqq3lbODaQT4LvxsoihdknrtdSBiFOHaODQY65DJBS8=");
 		
-		final String EXPECTED = "7," + username + ",**********";
-		Assert.assertEquals(EXPECTED, u.toString());
+		// exercise
+		String s = u.toString();
+
+		// verify
+		String expected = "7," + username;
+		Assert.assertEquals(expected, s);
 	}
 }
