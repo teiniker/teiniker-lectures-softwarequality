@@ -11,11 +11,16 @@ public class ServiceException
 
 	public ServiceException()
 	{
-		super("ServiceException");
+		super();
 	}
-	
+
 	public ServiceException(String msg)
 	{
-		super("ServiceException: " + msg);
+		super(msg);
 	}
+
+	public ServiceException(String msg, Throwable cause)
+    {
+        super(msg, cause);
+    }
 }

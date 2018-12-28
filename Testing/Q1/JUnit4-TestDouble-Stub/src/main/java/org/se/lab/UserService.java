@@ -1,10 +1,6 @@
 package org.se.lab;
 
 
-/**
- * This is the implementation of a simple service object which is used as an 
- * Object Under Test (OUT).
- */
 public class UserService
 {
 	/*
@@ -12,9 +8,6 @@ public class UserService
 	 */
 	public UserService(UserDAO userDAO)
 	{
-		if(userDAO == null)
-			throw new IllegalArgumentException("UserDAO is null!");
-		
 		setUserDAO(userDAO);
 	}
 
@@ -32,34 +25,41 @@ public class UserService
     /*
      * Business Methods
      */
-    
-	public String toCSV(int id)
-    {
-        StringBuilder csv = new StringBuilder();
-        try 
-        {
-            User p = userDAO.findById(id);
-            csv.append(p.toString());
-        }
-        catch(DAOException e)
-        {
-            throw new ServiceException(e.getMessage());
-        }
-        return csv.toString();
-    }
-    
+
+
     public void addUser(User p)
     {
-        try 
+        try
         {
             userDAO.insert(p);
         }
         catch(DAOException e)
         {
-            throw new ServiceException(e.getMessage());
+            throw new ServiceException("Can't insert user!", e);
         }
     }
-    
-    
-    //...
+
+	public String toXml(int id)
+    {
+        try
+        {
+            User user = userDAO.findById(id);
+            return convertUser2Xml(user);
+        }
+        catch(DAOException e)
+        {
+            throw new ServiceException("Can't generate XML string!", e);
+        }
+    }
+
+    private String convertUser2Xml(User user)
+    {
+        StringBuilder xml = new StringBuilder();
+        xml.append("<user>");
+        xml.append("<id>").append(user.getId()).append("</id>");
+        xml.append("<name>").append(user.getUsername()).append("</name>");
+        xml.append("<password>").append(user.getPassword()).append("</password>");
+        xml.append("</user>");
+        return xml.toString();
+    }
 }

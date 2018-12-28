@@ -1,74 +1,89 @@
 package org.se.lab;
 
-/**
- * We use this Transfer Object (TO) to carry multiple data elements across 
- * all application tiers.
- * Instead of sending or receiving individual data elements, a TO contains
- * all the data elements in a single structure required by the request or 
- * response. The TO is passed by value to the client, even in the remote case.
- */
 public class User
 {
-    private int id;
-    private String name;
-            
-    public User(int id, String name)
+	/*
+	 * Initialization constructor
+	 */
+	public User(int id, String username, String password)
+	{
+		setId(id);
+		setUsername(username);
+		setPassword(password);
+	}
+	
+	
+	/*
+	 * Property: id
+	 */
+	private int id;
+	public int getId()
+	{
+		return id;
+	}
+	public void setId(int id)
+	{
+		this.id = id;
+	} 
+	
+	
+	/*
+	 * Property: username
+	 */
+	private String username;
+	public String getUsername()
+	{
+		return username;
+	}
+	public void setUsername(String username)
+	{
+		if(username == null 
+				|| username.trim().length() == 0)
+			throw new IllegalArgumentException("username: " + username);
+		this.username = username;
+	}
+	
+	
+	/*
+	 * Property: password
+	 */
+	private String password;
+	public String getPassword()
+	{
+		return password;
+	}
+	public void setPassword(String password)
+	{
+		if(password == null || password.trim().length() == 0)
+			throw new IllegalArgumentException("password: " + password);
+		this.password = password;
+	}
+	
+
+	/*
+	 * Object methods
+	 */
+
+	@Override
+	public String toString()
+	{
+		return getId() + "," + getUsername();
+	}
+
+    @Override
+    public boolean equals(Object o)
     {
-        this.id = id;
-        this.name = name;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        return id == user.id;
     }
-    
-    
-    public int getId()
-    {
-        return id;
-    }
-    public void setId(int id)
-    {
-        this.id = id;
-    }
-    
-    public String getName()
-    {
-        return name;
-    }
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    
+
+    @Override
     public int hashCode()
     {
-        final int PRIME = 31;
-        int result = 1;
-        result = PRIME * result + id;
-        result = PRIME * result + ((name == null) ? 0 : name.hashCode());
-        return result;
-    }
-
-    public boolean equals(Object obj)
-    {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        final User other = (User) obj;
-        if (id != other.id)
-            return false;
-        if (name == null)
-        {
-            if (other.name != null)
-                return false;
-        }
-        else if (!name.equals(other.name))
-            return false;
-        return true;
-    }
-
-    public String toString()
-    {
-        return id + "," + name;
+        return id;
     }
 }

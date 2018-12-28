@@ -12,26 +12,9 @@ public class UserDAOStub
 	 * Manage internal states
 	 */
 
-	private int id;
-	protected int getId()
-	{
-		return id;
-	}
-	protected void setId(int id)
-	{
-		this.id = id;
-	}
-	
-	private User user;
-	protected User getUser()
-	{
-		return user;
-	}
-	protected void setUser(User user)
-	{
-		this.user = user;
-	}
-	
+	protected int id;
+	protected User user;
+    protected RuntimeException exception;
 	
 	/*
 	 * UserDAO methods
@@ -39,24 +22,36 @@ public class UserDAOStub
 	public void delete(int id)
 	{
 		System.out.println("UserDAOStub> delete: " + id);
-		setId(id);
+		this.id = id;
 	}
 
 	public User findById(int id)
 	{
 		System.out.println("UserDAOStub> findById: " + id);
-		return getUser();
+
+		if(exception != null)
+			throw exception;
+
+		return user;
 	}
 
-	public void insert(User p)
+	public void insert(User user)
 	{
-		System.out.println("UserDAOStub> insert: " + p);
-		setUser(p);
+		System.out.println("UserDAOStub> insert: " + user);
+
+        if(exception != null)
+            throw exception;
+
+		this.user=user;
 	}
 
-	public void update(User p)
+	public void update(User user)
 	{
-		System.out.println("UserDAOStub> update: " + p);
-		setUser(p);
+		System.out.println("UserDAOStub> update: " + user);
+
+        if(exception != null)
+            throw exception;
+
+		this.user=user;
 	}
 }
