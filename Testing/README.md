@@ -3,7 +3,7 @@
 Following the principles of Lisa Crispin and Janet Gregory, we can divide the 
 testing activities in a development iteration into four quadrants:
 
-![Agile Testing Quadrants](doc/AgileTesting.png){:width="100px"}
+<img src="doc/AgileTesting.png" alt="Agile Testing Quadrants" width="200"/>
 
 ## Q1: Test-Driven Development
 *Unit Tests* verify functionality of a small subset of the system (methods and 
