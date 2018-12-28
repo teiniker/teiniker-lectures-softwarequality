@@ -81,12 +81,10 @@ teardown.
 * **Avoiding the need for teardown**: We can replace the persistence 
     mechanism with a test double (e.g. Mock Object).
 
-
-
-
-
-
 ## References
 
 * Gerard Meszaros. **xUnit Test Patterns**. Addison-Wesley, 2007
 * [xUnit Test Patterns Web Page](http://xunitpatterns.com/)
+
+
+*Egon Teiniker, 2018, GPL v3.0*

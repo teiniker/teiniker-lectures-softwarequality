@@ -53,9 +53,9 @@ outcome has been obtained.
 state in which we found it.
 
 
-
 ## References
 
 * Gerard Meszaros. **xUnit Test Patterns**. Addison-Wesley, 2007 
 * [xUnit Test Patterns Web Page](http://xunitpatterns.com/)
 
+*Egon Teiniker, 2018, GPL v3.0*

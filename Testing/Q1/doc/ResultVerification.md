@@ -76,3 +76,5 @@ It reads the arguments from a *test data file* as it executes.
 
 * Gerard Meszaros. **xUnit Test Patterns**. Addison-Wesley, 2007 
 * [xUnit Test Patterns Web Page](http://xunitpatterns.com/)
+
+*Egon Teiniker, 2018, GPL v3.0*
