@@ -12,7 +12,7 @@ are sent to other components in the form of method calls or messages.
 (**Indirect Output**). 
 
 
-##Control Indirect Inputs
+## Control Indirect Inputs
 
 To test the SUT with indirect inputs, we must be able to control the DOC 
 well enough to cause it to return every possible kind of return value. 
