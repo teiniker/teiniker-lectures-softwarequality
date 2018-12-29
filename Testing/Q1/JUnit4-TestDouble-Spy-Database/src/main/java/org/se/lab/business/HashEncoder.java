@@ -4,12 +4,12 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public final class MD5Encoder
+public final class HashEncoder
 {
     /*
      * Don't create an instance of this class.
      */
-    private MD5Encoder() {}
+    private HashEncoder() {}
     
     
     public static byte[] convertToMD5Bytes(String s) 
@@ -18,7 +18,7 @@ public final class MD5Encoder
         if(s == null)
             throw new IllegalArgumentException();
         
-        MessageDigest algorithm = MessageDigest.getInstance("MD5");
+        MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
         byte[] defaultBytes = s.getBytes("UTF-8");
         algorithm.update(defaultBytes);
         byte[] bytes = algorithm.digest();

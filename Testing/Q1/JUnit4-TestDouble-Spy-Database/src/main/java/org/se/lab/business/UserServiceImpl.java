@@ -42,7 +42,7 @@ public class UserServiceImpl
 		String md5Password;
 		try
 		{
-			md5Password = MD5Encoder.convertToMD5String(password);
+			md5Password = HashEncoder.convertToMD5String(password);
 			User newUser = new User(firstName,lastName, username, md5Password);
 			logger.debug("new user: " + newUser);
 			
