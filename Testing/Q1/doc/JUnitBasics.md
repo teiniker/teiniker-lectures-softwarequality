@@ -6,7 +6,7 @@ xUnit Test Framework.
 ## JUnit Test Structure
 
 All members of the xUnit family implement a basic set of features.
-The individual parts of tha test setting are:
+The individual parts of the test setting are:
 
 * **System under Test (SUT)**: Whatever thing we are testing. The SUT is 
 always defined from the perspective of the test. When we are writing unit 
