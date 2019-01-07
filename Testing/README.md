@@ -1,4 +1,4 @@
-# Agile Testing
+# Testing Quadrants 
 
 Following the principles of Lisa Crispin and Janet Gregory, we can divide the 
 testing activities in a development iteration into four quadrants:

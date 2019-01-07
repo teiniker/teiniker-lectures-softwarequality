@@ -1,4 +1,4 @@
-# Software Quality by Examples
+# Software Quality by Example
 
 Following the Agile Testing approach, we can have to implement the following tests in each iteration:
 * Q1: Unit Tests
