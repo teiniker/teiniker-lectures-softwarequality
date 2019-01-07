@@ -1,0 +1,8 @@
+Exercise: Persistent Fixture
+-------------------------------------------------------------------------------
+
+You have given two test cases.
+Implement the missing fixture setup for these test cases.
+
+Note that there are several correct solutions for this task - discuss the
+different approaches.
