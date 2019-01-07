@@ -27,7 +27,7 @@ SUT.
 ```
 
 While the fake object makes the SUT work, the Spy test records every 
-interaction between the SUT and the UserDAO interface:
+interaction between the SUT and the *UserDAO* interface:
 
 ```java
     @Test

@@ -5,13 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * These test cases use the PersonService object as an Object Under Test.
- * 
- * Note that the UserService implementation uses the faked UserDAO
- * implementation, thus, only the UserService code is tested.
- */
-public class UserServiceTest 
+public class UserServiceTest
 {
     private UserService service;
     private UserDAOStub stub;
