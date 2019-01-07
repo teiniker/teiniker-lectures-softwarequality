@@ -1,32 +1,27 @@
-Exercise: Test Spy / ArticleService
+Exercise: Test Spy
 ---------------------------------------------------------------------
 
-Um die Klasse "ArticleService" in Isolation testen zu können, soll ein 
-Test-Double (Spy) verwendet werden.
+In order to be able to test the class "ArticleService" in, a test Spy
+should be used.
 
-Beachten Sie, dass zur Simulation der Datenbank-Zugriffe ein bereits
-vorhandener Test-Stub eingesetzt wird!
+Note that an existing test stub is used to simulate database access.
 
 
 1. Test Spy 
 ---------------------------------------------------------------------
-Implementieren Sie einen Test-Spy für das Interface "ArticleTable", 
-nennen Sie die Klasse "test/ArticleTableSpy".
+Implement a test spy for the "ArticleTable" interface name the class
+"ArticleTableSpy" and store it in the test folder.
 
-Sie brauchen nur jene Funktionalität zu implementieren, die für die
-gegebenen Tests notwendig sind.
+You only need to implement the functionality that is necessary for
+the given tests.
 
-Testen Sie Ihre Implementierung mit der Klasse 
-"ArticleServiceTestWithSpyAndStub"
-
+Test your implementation with the class "ArticleServiceSpyTest".
 
 
 2. Validating Parameter and Result Data 
 ---------------------------------------------------------------------
-Neben den aufgerufenen Methoden soll der Test-Spy auch die Daten der
-Parameter und Rückgabewerte loggen.
+In addition to the methods called, the test spy should also log the
+data of the parameters and return values.
 
-Erweitern Sie dazu den Test-Spy UND die Klasse 
-"ArticleServiceTestWithSpyAndStub" um die Parameter und Rückgabewerte 
-ebenfalls zu validieren.
-
+Expand the "ArticleTableSpy" AND the "ArticleServiceTestSpy" class to
+validate the parameters and return values.

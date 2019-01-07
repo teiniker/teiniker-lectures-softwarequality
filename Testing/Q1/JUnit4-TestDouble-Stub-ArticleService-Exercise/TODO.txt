@@ -1,26 +1,29 @@
-Exercise: Test Stub / ArticleService
+Exercise: Test Stub
 ---------------------------------------------------------------------
 
-Um die Klasse "ArticleService" in Isolation testen zu können, soll ein 
-Test-Double (Stub) verwendet werden.
+To test the class "ArticleService" in isolation, a test Stub should
+be used.
 
 
 1. Test Stub 
 ---------------------------------------------------------------------
-Implementieren Sie einen Test-Stub für das Interface "ArticleTable", 
-nennen Sie die Klasse "test/ArticleTableStub".
+Implement a test stub for the "ArticleTable" interface, name the class
+"ArticleTableStub" and store it in the test folder.
 
-Sie brauchen nur jene Funktionalität zu implementieren, die für die
-gegebenen Tests notwendig sind.
+You only need to implement the functionality that is necessary for the
+given tests.
 
-Testen Sie Ihre Implementierung mit der Klasse "ArticleServiceTestWithStub"
+Test your implementation with the "ArticleServiceStubTest" class.
 
 
 
 2. Testing Error Handling Code 
 ---------------------------------------------------------------------
-Es soll der Error-Handling Code in der Klasse "ArticleService" getestet
-werden.
+The error-handling code in the class "ArticleService" should be tested.
 
-Erweitern Sie dazu den Test-Stub UND die Klasse "ArticleServiceTestWithStub".
+To do this, extend the "ArticleTableStub" AND the "ArticleServiceStubTest"
+class:
 
+    public void testAddArticleTableException()
+    public void testNumberOfArticlesNullPointerException()
+    public void testNumberOfArticlesTableException()

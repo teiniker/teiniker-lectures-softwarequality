@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ArticleServiceTestWithSpyAndStub
+public class ArticleServiceSpyTest
 {
 	private ArticleTableStub stub;
 	private ArticleTableSpy spy;
@@ -39,7 +39,6 @@ public class ArticleServiceTestWithSpyAndStub
 		// behavioral verification
 		Assert.assertEquals(1, spy.logs.size());
 		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.insert"));
-		// TODO: validate parameter data
 		Assert.assertTrue(spy.logs.get(0).contains("1,Effective Java,3495"));
 	}
 	

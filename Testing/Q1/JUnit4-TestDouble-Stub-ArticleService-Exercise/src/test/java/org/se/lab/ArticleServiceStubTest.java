@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ArticleServiceTestWithStub
+public class ArticleServiceStubTest
 {
 	private ArticleTableStub stub;
 	private ArticleService service;
@@ -34,7 +34,7 @@ public class ArticleServiceTestWithStub
 		Assert.assertEquals(3495, a.getPrice());
 	}
 
-	// TODO: public void testAddArticle_TableException()
+	// TODO: public void testAddArticleTableException()
 	
 	
 	@Test
@@ -54,7 +54,7 @@ public class ArticleServiceTestWithStub
 		Assert.assertEquals(3, number);		
 	}		
 	
-	// TODO: public void testNumberOfArticles_NullPointerException()	
+	// TODO: public void testNumberOfArticlesNullPointerException()
 
-	// TODO: public void testNumberOfArticles_TableException()
+	// TODO: public void testNumberOfArticlesTableException()
 }
