@@ -11,10 +11,6 @@ folgende Test Klassen zu implementieren:
 Beachten Sie, dass Sie für das gegebene Interface "PostTable" einen
 Test-Stub mit dem Namen "PostTableStub" brauchen werden.
 
-Erstellen Sie die Testfälle so, dass eine 100% Code Coverage (Cobertura)
+Erstellen Sie die Testfälle so, dass eine 100% Code Coverage
 erreicht wird. 
-
-Tipp: Generieren Sie das Klassendiagramm der gegebenen Implementierung
-und analysieren Sie die Funktionalität der Klassen. Schreiben Sie zuerst 
-die "Happy-Path" Tests und anschließend die Tests für das Error-Handling.
 
