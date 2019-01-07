@@ -53,7 +53,7 @@ public class DelegatedFixtureTest
 
 ### Implicit fixture setup
 
-The instantiation code is moved to the @Before annotated method, which is executed before each test method.
+The instantiation code is moved to the **@Before** annotated method, which is executed before each test method.
 
 ```java
 public class ImplicitFixtureTest

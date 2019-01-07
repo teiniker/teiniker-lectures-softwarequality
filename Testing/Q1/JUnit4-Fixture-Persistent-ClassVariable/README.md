@@ -1,7 +1,7 @@
 ## Example: JUnit4-Fixture-Persistent-ClassVariable
 
 This example shows the use of a static field in a Test Fixture.
-Since this is a persistent fixture, the static field must be re-set in 
+Since this is a persistent fixture, the static field must be reseted in 
 the teardown phase.
 
 ```java
