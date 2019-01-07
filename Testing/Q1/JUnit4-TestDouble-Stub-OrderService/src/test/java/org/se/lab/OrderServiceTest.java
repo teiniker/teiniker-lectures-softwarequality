@@ -48,7 +48,7 @@ public class OrderServiceTest
 	
 	
 	@Test
-	public void testToXml_TableException()
+	public void testToXmlTableException()
 	{
 		// setup
 		stub.exception = new TableException("Can't connect to database!");
@@ -68,7 +68,7 @@ public class OrderServiceTest
 	
 	
 	@Test
-	public void testToXml_NullPointerException()
+	public void testToXmlNullPointerException()
 	{
 		// setup
 		stub.exception = new NullPointerException();
