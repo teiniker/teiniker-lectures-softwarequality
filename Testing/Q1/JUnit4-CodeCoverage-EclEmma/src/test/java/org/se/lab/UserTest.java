@@ -106,6 +106,4 @@ public class UserTest
 
 		Assert.assertFalse(u1.equals(u2));
 	}
-
-	
 }
