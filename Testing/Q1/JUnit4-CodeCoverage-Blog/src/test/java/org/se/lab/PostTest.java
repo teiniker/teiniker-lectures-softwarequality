@@ -6,38 +6,38 @@ import org.junit.Test;
 
 public class PostTest
 {
-	private Post p;
+	private Post post;
 	
 	@Before
 	public void setup()
 	{
-		p = new Post(1, "Eve hacked FB!");
+		post = new Post(1, "Eve hacked FB!");
 	}
 
 	@Test
 	public void testConstructor()
 	{
-		Assert.assertEquals(1, p.getId());
-		Assert.assertEquals("Eve hacked FB!", p.getText());
+		Assert.assertEquals(1, post.getId());
+		Assert.assertEquals("Eve hacked FB!", post.getText());
 	}
 
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetId_NegativeId()
+	public void testSetIdNegativeId()
 	{
-		p.setId(-1);
+		post.setId(-1);
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetText_NullPointer()
+	public void testSetTextNullPointer()
 	{
-		p.setText(null);
+		post.setText(null);
 	}
 	
 	@Test
 	public void testToString()
 	{
-		Assert.assertEquals("1,Eve hacked FB!", p.toString());
+		Assert.assertEquals("1,Eve hacked FB!", post.toString());
 	}
 	
 	@Test
@@ -45,33 +45,33 @@ public class PostTest
 	{
 		Post q = new Post(1, "Eve hacked FB!");
 		
-		Assert.assertTrue(p.hashCode() == q.hashCode());
+		Assert.assertTrue(post.hashCode() == q.hashCode());
 	}
 	
 	@Test
-	public void testEquals_This()
+	public void testEqualsThis()
 	{
-		Assert.assertTrue(p.equals(p));
+		Assert.assertTrue(post.equals(post));
 	}
 	
 	@Test
-	public void testEquals_Null()
+	public void testEqualsNull()
 	{
-		Assert.assertFalse(p.equals(null));
+		Assert.assertFalse(post.equals(null));
 	}
 	
 	@Test
-	public void testEquals_WrongType()
+	public void testEqualsWrongType()
 	{
-		Assert.assertFalse(p.equals(""));
+		Assert.assertFalse(post.equals(""));
 	}
 	
 	@Test
-	public void testEquals_WrongId()
+	public void testEqualsWrongId()
 	{
 		Post q = new Post(2, "Eve hacked FB!");
 		
-		Assert.assertFalse(p.equals(q));
+		Assert.assertFalse(post.equals(q));
 	}
 
 	@Test
@@ -79,7 +79,6 @@ public class PostTest
 	{
 		Post q = new Post(1, "Eve hacked FB!");
 		
-		Assert.assertTrue(p.equals(q));
+		Assert.assertTrue(post.equals(q));
 	}
-
 }

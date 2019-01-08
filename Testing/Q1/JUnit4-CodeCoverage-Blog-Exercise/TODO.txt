@@ -1,16 +1,15 @@
 Exercise: Code Coverage
 ---------------------------------------------------------------------
 
-Für die gegebenen Klassen "Blog", "Post" und "IntegerSequence" sind
-folgende Test Klassen zu implementieren:
+For the given classes "Blog", "Post" and "IntegerSequence", the 
+following test classes have to be implemented:
 
 	IntegerSequenceTest
 	PostTest
 	BlogTest
 	
-Beachten Sie, dass Sie für das gegebene Interface "PostTable" einen
-Test-Stub mit dem Namen "PostTableStub" brauchen werden.
+Note that you will need a test stub named "PostTableStub" for the 
+given "PostTable" interface.
 
-Erstellen Sie die Testfälle so, dass eine 100% Code Coverage
-erreicht wird. 
-
+Build the test cases so that a 100% code coverage (line coverage) is 
+reached.

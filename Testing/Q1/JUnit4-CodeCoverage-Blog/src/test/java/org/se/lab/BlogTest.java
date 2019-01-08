@@ -47,8 +47,7 @@ public class BlogTest
 	@Test
 	public void testGetPosts()
 	{
-		List<Post> posts = blog.getPosts();
-		
+		List<Post> posts = blog.getPosts();	
 		Assert.assertEquals(3, posts.size());
 	}
 
@@ -64,21 +63,19 @@ public class BlogTest
 	public void testFilter()
 	{
 		List<Post> swdPosts = blog.filter("SWD");
-		
 		Assert.assertEquals(2, swdPosts.size());
 	}
 
 	@Test(expected=IllegalArgumentException.class)
-	public void testFilter_NullPointer()
+	public void testFilterNullPointer()
 	{
 		blog.filter(null);
 	}
 
 	@Test(expected=BlogException.class)
-	public void testFilter_SQLException()
+	public void testFilterSQLException()
 	{
 		stub.excpetion = new SQLException();
 		blog.filter("SWD");
 	}
-
 }
