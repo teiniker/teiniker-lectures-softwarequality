@@ -7,7 +7,7 @@ testing activities in a development iteration into four quadrants:
 <img src="doc/AgileTesting.png" alt="Agile Testing Quadrants" width="500" />
 </p>
 
-## Q1: Test-Driven Development
+## Q1: Unit Tests
 *Unit Tests* verify functionality of a small subset of the system (methods and 
 objects).
 *Component Tests* verify the behaviour of a larger part of the system (group of 
@@ -19,7 +19,7 @@ language as the application.
 Unit and component tests are implemented by the team (the tester supports the 
 team by defining test cases).  
 
-## Q2: Functional Tests 
+## Q2: Integration Tests 
 *Functional Tests* which are customer tests define external quality and the 
 features that the customer (PO) wants. These tests also drive development, 
 but at a higher level.
