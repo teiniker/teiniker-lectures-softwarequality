@@ -20,16 +20,21 @@ public class ExceptionTest
     @Test
     public void aMethodWithExceptionAndMessage()
     {
+    	// setup
+    	
     	try
     	{
+    		// exercise
     		setName(null);
     		fail();
     	}
     	catch(NullPointerException e)
     	{
+    		// verify
     		String msg = e.getMessage();
     		assertEquals("Parameter name is null!", msg);
     	}
+    	// teardown
     }
     
     
