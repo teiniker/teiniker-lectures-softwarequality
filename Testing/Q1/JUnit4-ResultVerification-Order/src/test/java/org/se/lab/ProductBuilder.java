@@ -46,6 +46,6 @@ public class ProductBuilder
 
     public Order build()
     {
-        return this.lineBuilder.build();
+        return lineBuilder.build();
     }
 }
