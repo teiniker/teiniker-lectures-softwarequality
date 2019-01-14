@@ -46,6 +46,6 @@ public class OrderLineBuilder
 
     public Order build()
     {
-        return this.orderBuilder.build();
+        return orderBuilder.build();
     }
 }
