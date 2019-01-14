@@ -13,8 +13,7 @@ public class CustomAssert
         Assert.assertEquals(expected.getId(), actual.getId());
         Assert.assertEquals(expected.getName(), actual.getName());
         
-        Assert.assertEquals(expected.getOrderLines().size(), 
-                actual.getOrderLines().size());
+        Assert.assertEquals(expected.getOrderLines().size(), actual.getOrderLines().size());
         
         for(int i=0; i<expected.getOrderLines().size(); i++)
         {
