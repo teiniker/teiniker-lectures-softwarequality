@@ -1,20 +1,19 @@
 package org.se.lab;
 
-import javafx.scene.control.Tab;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mock;
-
-import java.util.Arrays;
-import java.util.List;
-
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.same;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
 
 public class ArticleServiceStubTest
 {
@@ -100,6 +99,8 @@ public class ArticleServiceStubTest
 		}
 	}
 
+	
+	@Test
 	public void testNumberOfArticlesTableException()
 	{
 		// setup
