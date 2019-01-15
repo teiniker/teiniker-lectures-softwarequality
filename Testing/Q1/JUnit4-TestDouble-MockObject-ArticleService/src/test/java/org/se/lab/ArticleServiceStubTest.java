@@ -1,6 +1,7 @@
 package org.se.lab;
 
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.eq;
 import static org.mockito.Matchers.same;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
@@ -39,7 +40,8 @@ public class ArticleServiceStubTest
 		service.addArticle(book);
 		
 		// verify
-	    verify(table).insert(same(book));
+	    // verify(table).insert(same(book));
+        verify(table).insert(eq(new Article(1, "Effective Java", 3495)));
 	}
 
 	@Test
