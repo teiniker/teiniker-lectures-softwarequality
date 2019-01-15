@@ -4,10 +4,12 @@ package org.se.lab;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.initMocks;
 
 public class UserServiceStubTest
 {
@@ -19,7 +21,7 @@ public class UserServiceStubTest
     @Before
     public void setup()
     {
-        MockitoAnnotations.initMocks(this);
+        initMocks(this);
         service = new UserService(dao);
     }
 
@@ -31,6 +33,21 @@ public class UserServiceStubTest
 
         // verify
         verify(dao).insert(isA(User.class));
+    }
+
+    @Test
+    public void testAddUserWithArgumentCaptor()
+    {
+        ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
+
+        // exercise
+        service.addUser(new User(7, "homer", "Kqq3lbODaQT4LvxsoihdknrtdSBiFOHaODQY65DJBS8="));
+
+        // verify
+        verify(dao).insert(captor.capture());
+        Assert.assertEquals(7, captor.getValue().getId());
+        Assert.assertEquals("homer", captor.getValue().getUsername());
+        Assert.assertEquals("Kqq3lbODaQT4LvxsoihdknrtdSBiFOHaODQY65DJBS8=", captor.getValue().getPassword());
     }
 
     @Test(expected = ServiceException.class)
