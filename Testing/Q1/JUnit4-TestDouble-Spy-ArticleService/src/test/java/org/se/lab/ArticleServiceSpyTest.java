@@ -39,7 +39,6 @@ public class ArticleServiceSpyTest
 		// behavioral verification
 		Assert.assertEquals(1, spy.logs.size());
 		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.insert"));
-		Assert.assertTrue(spy.logs.get(0).contains("1,Effective Java,3495"));
 	}
 	
 	@Test
@@ -59,13 +58,7 @@ public class ArticleServiceSpyTest
 		Assert.assertEquals(3, number);		
 
 		// behavioral verification
-		System.out.println(spy.logs);
 		Assert.assertEquals(1, spy.logs.size());
 		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.findAll()"));
-
-		// TODO: Verify return data
-		Assert.assertTrue(spy.logs.get(0).contains("1,Effective Java,3495"));
-		Assert.assertTrue(spy.logs.get(0).contains("2,Java Concurrency in Practice,3895"));
-		Assert.assertTrue(spy.logs.get(0).contains("3,Clean Code: A Handbook of Agile Software Craftsmanship,3095"));
-	}	
+	}
 }

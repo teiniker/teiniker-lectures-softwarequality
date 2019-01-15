@@ -59,11 +59,9 @@ public class ArticleTableSpy
 	@Override
 	public List<Article> findAll()
 	{
-		StringBuilder msg = new StringBuilder();
-		msg.append("ArticleTable.findAll(): ");
+		log("ArticleTable.findAll()");
+
 		List<Article> articles = table.findAll();
-		msg.append(articles);
-		log(msg.toString());
 		return articles;
 	}
 }
