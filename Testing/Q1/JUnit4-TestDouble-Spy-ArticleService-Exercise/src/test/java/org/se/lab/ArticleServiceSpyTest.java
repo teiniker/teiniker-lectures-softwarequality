@@ -1,10 +1,10 @@
 package org.se.lab;
 
-import java.util.Arrays;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 public class ArticleServiceSpyTest
 {
@@ -39,8 +39,6 @@ public class ArticleServiceSpyTest
 		// behavioral verification
 		Assert.assertEquals(1, spy.logs.size());
 		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.insert"));
-
-		// TODO: validate parameter data
 	}
 	
 	@Test
@@ -61,8 +59,6 @@ public class ArticleServiceSpyTest
 
 		// behavioral verification
 		Assert.assertEquals(1, spy.logs.size());
-		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.findAll"));
-
-		// TODO: Verify return data
-	}	
+		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.findAll()"));
+	}
 }
