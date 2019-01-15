@@ -2,9 +2,10 @@ package org.se.lab;
 
 public class UserBuilder
 {
-    private int id;
-    private String username;
-    private String password;
+    // default values
+    private int id = 1;
+    private String username = "user";
+    private String password = "BPiZbadjt6lpsQKO4wB1aerzpjVIbdqyEdUSyFud+Ps=";
 
     // Builder operations
 
