@@ -110,6 +110,43 @@ Mockito provides build-in matchers, such as *anyInt()*, *anyDouble()*,
 The *isA()* matcher checks whether the passed object is an instance of 
 the expected class type. The *any(T)* matcher also works in the same way.
 
+An **ArgumentCaptor** object can verify the arguments passed to a stubbed method.
+Sometimes, we pass an object to a method on a mocked dependency, but never return it.
+Argument captors let us directly access these values provided to our mocks in 
+order to examine them more closely.
+
+```java
+    @Test
+    public void testAddUserWithArgumentCaptor()
+    {
+        ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
+
+        // exercise
+        service.addUser(new User(7, "homer", "Kqq3lbODaQT4LvxsoihdknrtdSBiFOHaODQY65DJBS8="));
+
+        // verify
+        verify(dao).insert(captor.capture());
+        Assert.assertEquals(7, captor.getValue().getId());
+        Assert.assertEquals("homer", captor.getValue().getUsername());
+        Assert.assertEquals("Kqq3lbODaQT4LvxsoihdknrtdSBiFOHaODQY65DJBS8=", captor.getValue().getPassword());
+    }
+```
+
+An ArgumentCaptor object is defined as follows:
+```java
+ArgumentCaptor<T> captor = ArgumentCaptor.forClass(T.class);
+```
+
+To capture arguments, the following syntax is used:
+```java
+verify(mockObject).method(captor.capture());
+```
+
+Using the *captor.getValue()* method, the captured object can be analyzed.
+If an ArgumentCaptor object captures arguments for multiple invocations, the captured values can be 
+retrieved by calling the *captor.getAllValues()* method. 
+
+
 
 #### Throwing Exceptions
 To test the behavior in the event of an error, the method **thenThrow()** can 
