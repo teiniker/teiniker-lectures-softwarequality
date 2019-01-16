@@ -7,7 +7,7 @@ testing activities in a development iteration into four quadrants:
 <img src="doc/AgileTesting.png" alt="Agile Testing Quadrants" width="500" />
 </p>
 
-## Q1: Test-Driven Development
+## Q1: Unit Tests 
 *Unit Tests* verify functionality of a small subset of the system (methods and 
 objects).
 *Component Tests* verify the behaviour of a larger part of the system (group of 
@@ -19,7 +19,9 @@ language as the application.
 Unit and component tests are implemented by the team (the tester supports the 
 team by defining test cases).  
 
-## Q2: Functional Tests 
+[Q1: Examples](https://github.com/teiniker/teiniker-lectures-softwarequality/tree/master/Testing/Q1)
+
+## Q2: Integration Tests 
 *Functional Tests* which are customer tests define external quality and the 
 features that the customer (PO) wants. These tests also drive development, 
 but at a higher level.
@@ -30,6 +32,7 @@ code without having to go through a presentation layer.
 Functional tests are implemented by the team based on examples and 
 prototypes and test cases provided from the PO and the tester.
 
+[Q2: Examples](https://github.com/teiniker/teiniker-lectures-softwarequality/tree/master/Testing/Q2)
 
 ## Q3: GUI Tests
 These business-facing tests exercise the working software to see if it 
@@ -41,6 +44,7 @@ to setup the data we need).
 
 GUI tests are performed by the tester.
 
+[Q3: Examples](https://github.com/teiniker/teiniker-lectures-softwarequality/tree/master/Testing/Q3)
 
 ## Q4:  Non-Functional Tests
 These tests are intended to critique product characteristics such as 
@@ -52,7 +56,7 @@ and additional expertise.
 This job is done by the tester (usually the tester needs help from the team 
 in technological issues).
 
-
+[Q4: Examples](https://github.com/teiniker/teiniker-lectures-softwarequality/tree/master/Testing/Q4)
 
 ## References
 
