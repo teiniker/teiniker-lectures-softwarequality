@@ -44,8 +44,6 @@ to setup the data we need).
 
 GUI tests are performed by the tester.
 
-[Q3: Examples](https://github.com/teiniker/teiniker-lectures-softwarequality/tree/master/Testing/Q3)
-
 ## Q4:  Non-Functional Tests
 These tests are intended to critique product characteristics such as 
 performance, robustness, and security. 
@@ -55,8 +53,6 @@ and additional expertise.
 
 This job is done by the tester (usually the tester needs help from the team 
 in technological issues).
-
-[Q4: Examples](https://github.com/teiniker/teiniker-lectures-softwarequality/tree/master/Testing/Q4)
 
 ## References
 
